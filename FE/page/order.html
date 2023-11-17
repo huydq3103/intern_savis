@@ -1,0 +1,131 @@
+<div class="bg-light">
+
+    <div class="container order">
+        <section class="VYJdTQ" aria-role="tablist">
+            <h2 class="a11y-hidden"></h2>
+            <a class="OFl2GI  " title="Tất cả" aria-role="tab" aria-selected="true"
+                aria-controls="olp_panel_id-0.9746691728108972" id="olp_tab_id-0.9746691728108972"
+                ng-init="changeTab(0)" ng-click="changeTab(0)" ng-style="tabStyles[0]"><span
+                    class="_20hgQK">Tất
+                    cả</span></a>
+            <a class="OFl2GI " title="Chờ thanh toán" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.804252001945102" id="olp_tab_id-0.804252001945102"
+                ng-style="tabStyles[1]"><span class="_20hgQK" ng-click="changeTab(1)">Chờ thanh toán </span></a>
+            <a class="OFl2GI" title="Vận chuyển" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.2887319911002513" id="olp_tab_id-0.2887319911002513"
+                ng-style="tabStyles[2]"><span class="_20hgQK" ng-click="changeTab(2)">Vận chuyển</span></a>
+            <a class="OFl2GI" title="Đang giao" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.013584319245882215" id="olp_tab_id-0.013584319245882215"
+                ng-style="tabStyles[3]"><span class="_20hgQK" ng-click="changeTab(3) ">Đang
+                    giao</span></a>
+            <a class="OFl2GI" title="Hoàn thành" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.56677864283909" id="olp_tab_id-0.56677864283909"
+                ng-style="tabStyles[4]"><span class="_20hgQK" ng-click="changeTab(4) ">Hoàn thành</span></a>
+            <a class="OFl2GI" title="Đã hủy" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.10972208457828492" id="olp_tab_id-0.10972208457828492"
+                ng-style="tabStyles[5]"><span class="_20hgQK" ng-click="changeTab(5)">Đã hủy</span></a>
+            <a class="OFl2GI" title="Trả hàng/Hoàn tiền" aria-role="tab" aria-selected="false"
+                aria-controls="olp_panel_id-0.7589534890218537" id="olp_tab_id-0.7589534890218537"
+                ng-style="tabStyles[6]"><span class="_20hgQK" ng-click="changeTab(6)">Trả hàng/Hoàn tiền</span></a>
+        </section>
+        <div class="VrgkXA" bis_skin_checked="1"><i class="bi bi-search fs-4 ms-3 me-3 text-secondary"></i>
+            <input aria-label="" role="search" autocomplete="on" placeholder="Tìm kiếm" ng-model="productSearch"
+                ng-change="searchOrdersByProduct()">
+        </div>
+        <div>
+        </div>
+        <div ng-include="'page/order_waitPay.html'" ng-show="selectedTab==0"></div>
+        <div ng-include="'page/order_waitPay.html'" ng-show="selectedTab==1"></div>
+        <div ng-include="'page/order_waitShip.html'" ng-show="selectedTab==2"></div>
+        <div ng-include="'page/order_shipping.html'" ng-show="selectedTab==3"></div>
+        <div ng-include="'page/order_done.html'" ng-show="selectedTab==4"></div>
+        <div ng-include="'page/order_cancel.html'" ng-show="selectedTab==5"></div>
+
+    </div>
+</div>
+<style>
+    .VYJdTQ {
+        /* width: 100%;
+        /* margin-bottom: 12px; */
+        display: flex;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        margin-top: -10px;
+        margin-bottom: -20px;
+    }
+
+    .OFl2GI {
+        cursor: pointer;
+        padding: 16px 0;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: rgba(0, 0, 0, .8);
+        background: #e9e7e7;
+        border-bottom: 2px solid rgba(0, 0, 0, .09);
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        transition: color .2s;
+        margin-top: -30px;
+        margin-bottom: -40px;
+        height: 60px;
+    }
+
+    .gAImis,
+    .OFl2GI:hover {
+        color: #402dee;
+    }
+
+    .gAImis {
+        border-color: #402dee;
+    }
+
+    ._20hgQK {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .VrgkXA {
+        padding: 12px 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .05);
+        color: #212121;
+        background: #eaeaea;
+        border-radius: 2px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+
+    .VrgkXA>svg {
+        margin: 0 15px;
+        stroke: #bbb;
+    }
+
+    svg:not(:root) {
+        overflow: hidden;
+    }
+
+    svg:not(:root) {
+        overflow-clip-margin: content-box;
+        overflow: hidden;
+    }
+
+    .VrgkXA>input {
+        flex: 1;
+        font-size: 14px;
+        line-height: 16px;
+        height: 30px;
+        border: 0;
+        outline: none;
+        background-color: inherit;
+    }
+</style>
+</div>
